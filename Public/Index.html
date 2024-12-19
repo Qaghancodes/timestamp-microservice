@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <form action="/" method="GET">
+        <label for="date">Enter Date or Timestamp: </label>
+        <input type="text" id="date" name="date">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result">
+        <h2>Result:</h2>
+        <p id="unix"></p>
+        <p id="utc"></p>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const resultDiv = document.getElementById('result');
+        const unixElement = document.getElementById('unix');
+        const utcElement = document.getElementById('utc');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const dateInput = document.getElementById('date').value;
+
+            fetch(`/api/${dateInput}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        unixElement.textContent = 'Error: Invalid Date';
+                        utcElement.textContent = '';
+                    } else {
+                        unixElement.textContent = `Unix Timestamp: ${data.unix}`;
+                        utcElement.textContent = `UTC Date: ${data.utc}`;
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
