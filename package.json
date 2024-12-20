@@ -1,18 +1,17 @@
 {
-    "name": "timestamp-microservice",
-    "version": "1.0.0",
-    "description": "Timestamp Microservice",
-    "main": "app.js",
-    "scripts": {
-        "start": "nodemon app.js"
+    "valid_timestamp": {
+        "unix": 1451001600000,
+        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
     },
-    "dependencies": {
-        "express": "^4.17.1",
-        "ejs": "^3.1.7"
+    "invalid_date": {
+        "error": "Invalid Date"
     },
-    "devDependencies": {
-        "nodemon": "^2.0.15"
+    "valid_date_string": {
+        "unix": 1451001600000,
+        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
     },
-    "author": "",
-    "license": "ISC"
+    "valid_unix_from_date_string": {
+        "unix": 1451001600000,
+        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
+    }
 }
