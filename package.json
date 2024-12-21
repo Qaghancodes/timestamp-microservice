@@ -1,7 +1,7 @@
 {
   "name": "timestamp-microservice",
   "version": "1.0.0",
-  "description": "A timestamp microservice to handle both Unix and UTC format requests",
+  "description": "A timestamp microservice that returns the Unix timestamp and UTC string for given date inputs.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -15,3 +15,4 @@
     "node": ">=14.0.0"
   }
 }
+

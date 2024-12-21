@@ -1,23 +1,21 @@
-// Here we include both the server logic and instructions in a single script for you
-const fs = require('fs');
 const express = require('express');
 const app = express();
 
-// Helper function to handle the date and return a valid Date object
+// Helper function to parse the date and return it in the correct format
 function parseDate(dateParam) {
-  // If the dateParam is a Unix timestamp (numeric string), we convert it to a Date object
+  // Check if the date is a Unix timestamp (i.e., a number)
   if (!isNaN(dateParam)) {
-    const date = new Date(parseInt(dateParam)); // Convert string to number, then to a Date object
+    const date = new Date(parseInt(dateParam)); // Convert string to number and then to Date
     if (date.toString() === 'Invalid Date') {
-      return null; // Return null for invalid date
+      return null; // Return null if the date is invalid
     }
     return date;
   }
 
-  // Otherwise, try to parse it as a regular date string (e.g., "2024-12-21")
+  // Check if it's a valid date string (can be a standard date string or ISO format)
   const date = new Date(dateParam);
   if (date.toString() === 'Invalid Date') {
-    return null; // Return null for invalid date
+    return null; // Return null if the date is invalid
   }
 
   return date;
@@ -39,7 +37,7 @@ app.get('/api/:date?', (req, res) => {
   // Parse the provided date (could be a Unix timestamp or a string)
   const parsedDate = parseDate(date);
 
-  // If the date is invalid, return an error
+  // If the date is invalid, return an error message
   if (!parsedDate) {
     return res.json({ error: 'Invalid Date' });
   }
@@ -57,31 +55,3 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-// Check if package.json exists
-const packageJsonContent = `
-{
-  "name": "timestamp-microservice",
-  "version": "1.0.0",
-  "description": "A timestamp microservice to handle both Unix and UTC format requests",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "author": "Your Name",
-  "license": "ISC",
-  "engines": {
-    "node": ">=14.0.0"
-  }
-}
-`;
-
-// Write package.json content to a file (if it doesn't already exist)
-if (!fs.existsSync('./package.json')) {
-  fs.writeFileSync('./package.json', packageJsonContent, 'utf8');
-  console.log('package.json has been created');
-} else {
-  console.log('package.json already exists');
-}
