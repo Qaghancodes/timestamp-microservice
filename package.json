@@ -1,17 +1,15 @@
 {
-    "valid_timestamp": {
-        "unix": 1451001600000,
-        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
-    },
-    "invalid_date": {
-        "error": "Invalid Date"
-    },
-    "valid_date_string": {
-        "unix": 1451001600000,
-        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
-    },
-    "valid_unix_from_date_string": {
-        "unix": 1451001600000,
-        "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
-    }
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
