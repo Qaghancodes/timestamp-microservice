@@ -1,7 +1,7 @@
 {
   "name": "timestamp-microservice",
   "version": "1.0.0",
-  "description": "A Timestamp Microservice that converts dates to Unix and UTC formats",
+  "description": "A timestamp microservice to handle both Unix and UTC format requests",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,7 +9,9 @@
   "dependencies": {
     "express": "^4.18.2"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Your Name",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
-
