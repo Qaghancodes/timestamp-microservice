@@ -1,15 +1,28 @@
 {
   "name": "timestamp-microservice",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "my test submition for the Backend Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2"
-  }
-, "error": "Invalid Date" }
+    "express": "^4.12.4",
+    "cors": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qaghancodes/timestamp-microservice"
+  },
+  "bugs": {
+    "url": "https://github.com/Qaghancodes/timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/Qaghancodes/timestamp-microservice/blob/95a9f77bcf237a42ede7372c5c3204a265c2b5e3/README.md",
+  "author": "Ogbuokiri Victor Chigozirimh",
+  "keywords": [
+    "node",
+    "express",
+    "freeCodeCamp"
+  ],
+  "license": "MIT"
+}
