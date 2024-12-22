@@ -12994,8 +12994,6 @@ function create_fragment$1(ctx) {
         ctx[3],
         "%;"
       ));
-class attribute of an HTML element with the id "div4" to a value that includes a comma and the
-characters "
       attr(div4, "class ","
         },
     m(target, anchor) {
