@@ -1,17 +1,24 @@
 /****** Main Styling ******/
-
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #FaFaFa;
-	text-align: center;
-	line-height: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #222;
+  background-color: #FaFaFa;
+  text-align: center;
+  line-height: 1.4em;
 }
 
 .container {
-	padding: 0;
-	margin-top: 40px;
+  padding: 0;
+  margin-top: 40px;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+h2 {
+  margin-top: 20px;
 }
 
 h3 {
@@ -19,11 +26,13 @@ h3 {
 }
 
 hr {
-	margin: 25px;
+  margin: 25px;
 }
 
 .footer {
-	margin-top: 40px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
 }
 
 code {
@@ -31,10 +40,13 @@ code {
   padding: 2px;
   color: black;
   background-color: #fff;
+  border-radius: 4px;
+  font-size: 1.2em;
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 li {
@@ -42,5 +54,10 @@ li {
 }
 
 a {
-	color: #2574A9;
+  color: #2574A9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
